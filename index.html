@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <title>Document</title>
+  <style>
+    .search:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    .input {
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    nav .btn {
+      background-color: transparent !important;
+      border: none !important;
+      color: rgb(26, 26, 26) !important;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn:focus {
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .btn:active {
+      opacity: 0 !important;
+    }
+
+    .nav {
+      box-shadow: 0px 4px 13px 1px rgba(41, 41, 41, 0.75);
+    }
+
+    .card {
+      transition: all 1s ease-in-out;
+    }
+
+    .card:hover {
+      box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.75);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <nav class="navbar nav navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-primary fw-semibold" href="#">H Mart</a>
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-start" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+
+            <form class="d-flex" role="search">
+              <input id="text" class="form-control me-1 ms-4 w-100 rounded input" type="search" placeholder="Search"
+                aria-label="Search">
+              <button type="button" id="search" class="btn btn-light"><i
+                  class="fa-solid fa-magnifying-glass"></i></button>
+              <button type="button" id="clear" class="btn btn-light"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div id="row1" class="row"></div>
+  </div>
+
+  <script>
+    var newarray = [];
+
+    var array = [
+      {
+        id: 1,
+        name: "iphone 12 mobile",
+        src: "pic/mobile1.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 2,
+        name: "hp laptop",
+        src: "pic/laptop1.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 3,
+        name: "wireless headphone red",
+        src: "pic/headphone1.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 4,
+        name: "curved lcd monitor",
+        src: "pic/lcd1.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 5,
+        name: "dell laptop",
+        src: "pic/laptop2.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 6,
+        name: "wirlesss headphone white",
+        src: "pic/headphone2.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 7,
+        name: "full hd lcd monitor",
+        src: "pic/lcd2.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 8,
+        name: "samsung galaxy blue mobile",
+        src: "pic/mobile2.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 9,
+        name: "hd lcd monitor",
+        src: "pic/lcd3.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 10,
+        name: "samsumg galaxy black mobile",
+        src: "pic/mobile3.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 11,
+        name: "wirless headphone black",
+        src: "pic/headphone3.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+      {
+        id: 12,
+        name: "lenovo laptop",
+        src: "pic/laptop3.png",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, delectus.",
+        pric: "200$",
+      },
+
+    ];
+
+
+    function showdata(curarray) {
+
+      document.getElementById("row1").innerText = "";
+      for (var i = 0; i < curarray.length; i++) {
+
+        document.getElementById("row1").innerHTML += `
+             <div class="col-md-3 mt-5">
+             <div class="card p-2">
+                  <img src="${curarray[i].src}" width="100%"/>
+                  <h6 class="text-capitalize fw-bolder mt-2 text-center text-primary">${curarray[i].name}</h6>
+                  <p class="text-center">${curarray[i].desc}</p>
+                  <p class="text-center text-danger">${curarray[i].pric}</p>
+                  <button class="btn btn-outline-primary">ADD</button>
+             </div>
+             </div>
+             `
+      }
+    }
+    showdata(array);
+
+
+
+    //Searching//
+    document.getElementById("search").addEventListener("click", function () {
+      let input = document.getElementById("text").value;
+      newarr = array.filter(function (a) {
+
+        if (a.name.includes(input)) {
+          return a.name;
+        }
+
+      })
+      showdata(newarr);
+    })
+
+    document.getElementById("clear").addEventListener("click", function () {
+      document.getElementById("text").value = " "
+      showdata(array)
+    })
+
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
